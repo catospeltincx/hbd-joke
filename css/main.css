@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background-color: red;
+}
+
+html {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    width: 2000px;
+    height: auto;
+}
+
+.pinga, .pingu {
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    margin: 5px;
+}
+
+.pinga {
+    top: 0;
+}
+
+.pingu {
+    left: 873px;
+    bottom: -172px;
+}
+
+.view-on-phone{
+    display: none;
+}
+
+/* overlay */
+.overlay-pingu:hover, .overlay-pinga:hover {
+    z-index: 103;
+    opacity: 1;
+}
+
+.overlay-pinga, .overlay-pingu {
+    z-index: 102;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.overlay-pinga {
+    position: absolute;
+    top: 55px;
+}
+
+.overlay-pingu {
+    position: absolute;
+    left: 873px;
+    bottom: -90px;
+}
+
+.text {
+    color: rgb(255, 0, 0);
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+@media only screen and (min-width: 600px) {
+    .view-on-phone {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: red;
+        color: rgb(28, 24, 255);
+    }
+}
+
